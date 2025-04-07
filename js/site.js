@@ -7,10 +7,10 @@ const savedThemeIcon = localStorage.getItem("themeIcon");
 if (!savedTheme) {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const theme = prefersDark ? "dark" : "light";
-  savedThemeIcon = prefersDark ? "☀️" : "🌙"; // Set default icon based on preference
+  const themeIcon = prefersDark ? "☀️" : "🌙"; // Set default icon based on preference
 
   // Apply the detected theme
-  setTheme(theme, savedThemeIcon); 
+  setTheme(theme, themeIcon); 
 } 
 
 setTheme(savedTheme, savedThemeIcon); // Apply saved theme
