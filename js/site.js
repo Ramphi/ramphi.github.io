@@ -4,7 +4,7 @@ const toggleButton = document.getElementById("darkModeToggle");
 const savedTheme = localStorage.getItem("theme");
 const savedThemeIcon = localStorage.getItem("themeIcon");
 
-if (savedTheme == "null") {
+if (savedTheme === "null") {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const theme = prefersDark ? "dark" : "light";
   const themeIcon = prefersDark ? "☀️" : "🌙"; // Set default icon based on preference
