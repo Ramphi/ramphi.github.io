@@ -1,16 +1,14 @@
 
 
 const toggleButton = document.getElementById("darkModeToggle");
-const savedTheme = localStorage.getItem("theme");
-const savedThemeIcon = localStorage.getItem("themeIcon");
+ savedTheme = localStorage.getItem("theme");
+ savedThemeIcon = localStorage.getItem("themeIcon");
 
-if (savedTheme === "null") {
+if (!savedTheme) {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const theme = prefersDark ? "dark" : "light";
-  const themeIcon = prefersDark ? "☀️" : "🌙"; // Set default icon based on preference
+  savedTheme = prefersDark ? "dark" : "light";
+  savedThemeIcon = prefersDark ? "☀️" : "🌙"; // Set default icon based on preference
 
-  // Apply the detected theme
-  setTheme(theme, themeIcon); 
 } 
 
 setTheme(savedTheme, savedThemeIcon); // Apply saved theme
