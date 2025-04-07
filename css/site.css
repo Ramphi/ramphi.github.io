@@ -50,6 +50,11 @@ a {
 
 nav {
     margin-top: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--bg-color);
+    padding-bottom: 10px;
 }
 
 .nav ul {
@@ -502,3 +507,29 @@ section:hover {
   color: var(--accent-color, #007bff);
 }
 
+.tech-stack {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-color, #333);
+}
+
+.tech-stack span {
+  background-color: var(--card-bg, #fff);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.curriculum{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
