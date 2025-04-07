@@ -73,6 +73,7 @@ nav a {
   
 nav a:hover {
     color: var(--link-color-hover);
+    background-color: #2f2d46;
 }
 
 .nav a::after {
@@ -346,6 +347,14 @@ section:hover {
 @media (max-width: 480px) {
   .contact-form {
     width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+
+  main{
+    width: 100%;
+    padding: 1rem;
   }
 }
 
