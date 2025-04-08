@@ -46,15 +46,29 @@ body {
 
 a {
     color: var(--link-color);
+}
+
+@media (min-width: 768px) {
+  .projects ul,
+  .skills ul {
+    grid-template-columns: repeat(2, 1fr); /* two columns on medium screens */
   }
 
-nav {
+  nav {
     margin-top: 1rem;
     position: sticky;
     top: 0;
     z-index: 999;
     background-color: var(--bg-color);
     padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects ul,
+  .skills ul {
+    grid-template-columns: repeat(3, 1fr); /* three columns on larger screens */
+  }
 }
 
 .nav ul {
@@ -144,9 +158,21 @@ section {
     transition: transform 0.2s ease;
 }
 
+
 section:hover {
     transform: translateY(-4px);
- }
+}
+
+section h2 {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color); /* or your section bg */
+  padding: 0.5rem 1rem;
+  margin: 0;
+  z-index: 900;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
  .logo {
     display: flex;
@@ -208,20 +234,6 @@ section:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-@media (min-width: 768px) {
-  .projects ul,
-  .skills ul {
-    grid-template-columns: repeat(2, 1fr); /* two columns on medium screens */
-  }
-}
-
-@media (min-width: 1024px) {
-  .projects ul,
-  .skills ul {
-    grid-template-columns: repeat(3, 1fr); /* three columns on larger screens */
-  }
 }
 
 .projects li,
@@ -532,4 +544,28 @@ section:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: var(--accent-color, #007bff);
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-weight: bold;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
 }
