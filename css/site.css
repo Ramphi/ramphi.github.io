@@ -95,6 +95,11 @@ a {
     position: relative;
     margin-left: 2rem;
   }
+  .logo h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -116,6 +121,16 @@ a {
     width: 100%;
     padding: 0px;
   }
+
+  header {
+    padding: 0.0052px !important;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0;
+}
 }
 
 .nav ul {
@@ -229,12 +244,6 @@ section h2 {
     justify-content: center;
     margin-bottom: 1rem;
  }
-
-.logo h1 {
-    font-size: 2rem;
-    color: var(--text-color);
-    margin: 0;
-}
 
 .profile-image img {
   width: 250px;
