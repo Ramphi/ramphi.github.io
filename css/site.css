@@ -28,8 +28,8 @@ html {
 
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -61,6 +61,35 @@ a {
     z-index: 999;
     background-color: var(--bg-color);
     padding-bottom: 10px;
+  }
+
+  .experience {
+    padding: 4rem 2rem;
+  }
+
+  .experience li::before {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: 1rem;
+    width: 14px;
+    height: 14px;
+    background-color: var(--accent-color, #007bff);
+    border-radius: 50%;
+  }
+
+  .experience ul::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--accent-color, #007bff);
+  }
+  .experience li {
+    position: relative;
+    margin-left: 2rem;
   }
 }
 
@@ -224,7 +253,7 @@ section h2 {
 
 .projects ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
     list-style: none;
 }
@@ -376,10 +405,9 @@ section h2 {
 
 
 .experience {
-  padding: 4rem 2rem;
   background-color: var(--bg-color);
   color: var(--text-color);
-  max-width: 900px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
@@ -430,32 +458,6 @@ section h2 {
 .about-me{
   background-color: var(--bg-color);
   color: var(--text-color);
-}
-
-.experience ul::before {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: var(--accent-color, #007bff);
-}
-
-.experience li {
-  position: relative;
-  margin-left: 2rem;
-}
-
-.experience li::before {
-  content: "";
-  position: absolute;
-  left: -2rem;
-  top: 1rem;
-  width: 14px;
-  height: 14px;
-  background-color: var(--accent-color, #007bff);
-  border-radius: 50%;
 }
 
 .date {
